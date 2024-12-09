@@ -37,6 +37,18 @@
 .dino {
   text-align: right;
 }
+
+.giraffe:hover {
+  background-color: lightgreen;
+}
+
+.crocodile:hover {
+  background-color: lightblue;
+}
+
+.dino:hover {
+  background-color: lightsalmon;
+}
 /*
   The giraffe is afraid of the crocodile and the dino.
    - Center the giraffe in the park.
