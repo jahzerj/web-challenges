@@ -24,6 +24,7 @@ body {
   padding: 10px;
   position: fixed;
   top: 0px;
+  z-index: 1;
 }
 
 .header__text {
@@ -42,9 +43,11 @@ body {
 .footer {
   background: #140523;
   color: #ffffff;
-  height: 48px;
+  height: fit-content;
   position: fixed;
   bottom: 0px;
+  width: 100%;
+  padding-bottom: 5px;
 }
 
 /**
@@ -95,4 +98,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999;
+  position: static;
+  margin-bottom: 10px;
 }
