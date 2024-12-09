@@ -55,7 +55,15 @@ section {
 */
 
 .subtitle {
-  /* Your solution */
+  border-left: solid 3px gold;
+  border-right: solid 3px gold;
+  padding: 10px;
+}
+
+.fav_sub {
+  border-left: orange solid 3px;
+  border-right: orange solid 3px;
+  padding: 10px;
 }
 
 /* ------- List ------- */
