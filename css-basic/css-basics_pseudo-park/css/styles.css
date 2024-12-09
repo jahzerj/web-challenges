@@ -22,7 +22,7 @@
 
 .animal {
   padding: 16px;
-
+  font-size: 32px;
   /*
     The animals are very small.
     The size of the emojis is controlled via the font size.
@@ -30,6 +30,13 @@
   */
 }
 
+.giraffe {
+  text-align: center;
+}
+
+.dino {
+  text-align: right;
+}
 /*
   The giraffe is afraid of the crocodile and the dino.
    - Center the giraffe in the park.
