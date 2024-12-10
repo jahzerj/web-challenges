@@ -1,0 +1,24 @@
+.main-content__menu-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--card-bg);
+  color: var(--card-text);
+  padding: 20px;
+  border-radius: 5px;
+  min-width: 300px;
+  flex: 1 1 30%;
+}
+
+.card__title {
+  margin: 0 0 10px 0;
+}
