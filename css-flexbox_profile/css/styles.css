@@ -25,6 +25,10 @@ body {
 .tech-stack__list {
   list-style: none;
   padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .tech-stack__list-item {
@@ -32,4 +36,14 @@ body {
   background-color: #252629;
   color: #ffffff;
   border-radius: 10px;
+  
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__image {
+  align-self: center;
 }
