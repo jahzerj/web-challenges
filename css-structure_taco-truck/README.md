@@ -9,7 +9,7 @@ The owner of The Taco Truck has realized that his website's design needs frequen
 > Your colleague has left you an `assets` folder containing these two images:
 
 | Wireframe                                  | Components                                          |
-| ------------------------------------------ | --------------------------------------------------- |
+| ------------------------------------------ | --------------------------------------------------- | 
 | ![Wireframe](./assets/wireframe-image.png) | ![Components](./assets/components-image.png)        |
 | This is the overall layout of the website. | These are the components your colleague identified. |
 

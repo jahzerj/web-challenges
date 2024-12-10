@@ -1,0 +1,27 @@
+.main-content {
+  background: var(--main-bg);
+  padding: 20px;
+  flex-direction: column;
+}
+
+.main-content__title {
+  color: var(--main-text);
+  background: var(--main-title-bg);
+  margin: 0 0 20px 0;
+  padding: 10px;
+}
+
+.main-content__menu-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.main-content__title {
+  justify-self: center;
+  width: 100%;
+  text-align: center;
+}

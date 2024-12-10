@@ -1,0 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--card-bg);
+  color: var(--card-text);
+  padding: 20px;
+  border-radius: 5px;
+  min-width: 300px;
+  flex: 1 1 30%;
+}
+
+.card__title {
+  margin: 0 0 10px 0;
+}
