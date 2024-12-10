@@ -11,6 +11,15 @@
   padding: 10px;
 }
 
+.main-content__menu-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .main-content__title {
   justify-self: center;
   width: 100%;
