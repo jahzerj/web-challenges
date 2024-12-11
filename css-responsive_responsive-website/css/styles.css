@@ -241,9 +241,9 @@ CSS based on conditions such as viewport width, etc. */
 /* Media Query Tablet */
 /* --- */
 @media (min-width: 900px) {
-  .main-content {
+  .card-section {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, 1fr);
   }
   .product-card {
     width: 400px;
