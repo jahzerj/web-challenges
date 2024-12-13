@@ -1,4 +1,4 @@
-console.clear();
+
 
 // The exercise starts here!
 
@@ -9,13 +9,13 @@ let coding =  'Happy coding!';
 // 2. Display the variable 'coding' as a message in the console.
 console.log(coding)
 // 3. Store the sentence 'Happy hacking!' in a variable named 'hacking'.
-let hacking = 'Happy Hacking!'
+let hacking = 'Happy Hacking!';
 // 4. Display the variable 'hacking' as a message in the console.
-console.log(hacking)
+console.log(hacking);
 // 5. Which method is used to clear the console? Use it to tidy up the console.
-console.clear()
+console.clear();
 // 6. Store the text 'This is an error!' in a variable 'error'.
-const error = 'This is an error!'
+const error = 'This is an error!';
 // 7. Which method is used to display an error message in the console? Use it do display the error message in the console.
-console.error()
+console.error(error);
 // Well done!
