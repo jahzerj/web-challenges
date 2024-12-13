@@ -10,7 +10,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const title = "This is a post!";
+const text =  'This is text for the post';
+let numberOfLikes = 12;
+const userName = 'aBunchofNumbers'
+const isReported = true;
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +22,15 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+console.log(title)
+console.log(text)
+console.log(numberOfLikes)
+console.log(userName)
+console.log(isReported)
+
+numberOfLikes++
+
+console.log(numberOfLikes);
+
 
 // --^-- write your code here --^--
