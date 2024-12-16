@@ -1,6 +1,6 @@
 console.clear();
 
-const operand1 = 12;
+let operand1 = 12;
 const operand2 = 4;
 
 // ----- Mathematical Operations -----
@@ -66,5 +66,38 @@ Step 2: Add event listeners to update `operand1` based on the button clicked. Lo
 */
 
 // --v-- write your code here --v--
+const plusOne = document.querySelector('[data-js="increase-by-one"]');
+const plusFive = document.querySelector('[data-js="increase-by-five"]');
+const minusOne = document.querySelector('[data-js="decrease-by-one"]');
+const minusFive = document.querySelector('[data-js="decrease-by-five"]');
+const multiplyTwo = document.querySelector('[data-js="multiply-by-two"]');
+const divideTwo = document.querySelector('[data-js="divide-by-two"]');
 
+plusOne.addEventListener("click", () => {
+  operand1 = operand1 + 1;
+  console.log(operand1);
+});
+
+plusFive.addEventListener("click", () => {
+  operand1 = operand1 + 5;
+  console.log(operand1);
+});
+
+minusOne.addEventListener("click", () => {
+  operand1 = operand1 - 1;
+  console.log(operand1);
+});
+
+minusFive.addEventListener("click", () => {
+  operand1 = operand1 - 5;
+  console.log(operand1);
+});
+multiplyTwo.addEventListener("click", () => {
+  operand1 = operand1 * 2;
+  console.log(operand1);
+});
+divideTwo.addEventListener("click", () => {
+  operand1 = operand1 / 2;
+  console.log(operand1);
+});
 // --^-- write your code here --^--
