@@ -47,7 +47,7 @@ h1 {
 }
 
 .section {
-  width: 100%;
+  width: 100;
   background-color: var(--color-water-10);
   padding: 20px;
 }
@@ -62,7 +62,7 @@ h1 {
 .box--one {
   background-color: lightblue;
 
-  width: 100px;
+  width: 50%;
   height: 100px;
 }
 
@@ -71,6 +71,13 @@ h1 {
 
   width: 100px;
   height: 100px;
+
+  @media screen and (min-width: 599px) {
+    width: 200px;
+  }
+  @media screen and (min-width: 1199px) {
+    width: 400px;
+  }
 }
 
 .box--three {
@@ -78,6 +85,14 @@ h1 {
 
   width: 50px;
   height: 250px;
+  @media screen and (orientation: landscape) {
+    width: 400px;
+    height: 30px;
+  }
+  @media screen and (orientation: portrait) {
+    width: 30px;
+    height: 400px;
+  }
 }
 
 .box--four {
@@ -85,6 +100,9 @@ h1 {
 
   width: 100px;
   height: 100px;
+  @media screen and (prefers-color-scheme: dark) {
+    background-color: #ff4a11;
+  }
 }
 
 .box--five {
