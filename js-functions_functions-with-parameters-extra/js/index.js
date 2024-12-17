@@ -6,7 +6,10 @@ console.clear();
    The formula is: square = number * number
 */
 
-function printSquare(number) {}
+function printSquare(number) {
+   let squaredNumber = number**2;
+   console.log(squaredNumber);
+};
 
 printSquare(3);
 printSquare(5);
