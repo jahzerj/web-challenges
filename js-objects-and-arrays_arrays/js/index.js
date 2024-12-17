@@ -6,9 +6,9 @@ console.clear();
 const exampleArray = [true];
 
 exampleArray[1] = 12;
-exampleArray[2] = 'string';
+exampleArray[2] = "string";
 
-console.log(exampleArray)
+console.log(exampleArray);
 // EXERCISE 2
 // Nest an array inside `nestedArray`. After completing this, `nestedArray` should contain an array as one of its elements.
 
@@ -32,7 +32,7 @@ console.log(firstNumber);
 
 const fruits = ["apple", "banana", "grapefruit"];
 
-fruits[0] = 'mango';
+fruits[0] = "mango";
 console.log(fruits);
 
 // EXERCISE 5
@@ -49,20 +49,31 @@ console.log(nestedNumber);
 
 const petsWithPush = ["dog", "cat", "rabbit"];
 
+petsWithPush.push("rat");
+console.log(petsWithPush);
 // EXERCISE 7
 // Use the `.pop()` method to remove the last item from `fruitsWithPop`.
 
 const fruitsWithPop = ["apple", "banana", "mango"];
+
+fruitsWithPop.pop();
+console.log(fruitsWithPop);
 
 // EXERCISE 8
 // Use the `.unshift()` array method to add "hamster" to the beginning of `unshiftedPets`.
 
 const unshiftedPets = ["dog", "cat", "rabbit"];
 
+unshiftedPets.unshift('hamster');
+console.log(unshiftedPets);
+
 // EXERCISE 9
 // Use the `.shift()` method to remove the first item from `shiftedFruits`.
 
 const shiftedFruits = ["apple", "banana", "mango"];
+shiftedFruits.shift();
+
+console.log(shiftedFruits);
 
 export {
   exampleArray,
