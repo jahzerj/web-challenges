@@ -40,5 +40,5 @@ switch (typeof data) {
     break;
   }
   default:
-    console.log("monkey");
+    console.log("I have no idea!");
 }
