@@ -37,17 +37,17 @@ main {
 }
 
 .red {
-  background-color: crimson;
+  background-color: red;
 }
 
 .blue {
-  background-color: royalblue;
+  background-color: blue;
 }
 
 .green {
-  background-color: seagreen;
+  background-color: green;
 }
 
 .gray {
-  background-color: darkslategray;
+  background-color: gray;
 }
