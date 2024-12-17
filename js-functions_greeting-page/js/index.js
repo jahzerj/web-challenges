@@ -41,7 +41,7 @@ const day = new Date().getDay();
 function getDayColor() {
   if (day === 1) {
     return "darkgray";
-  } else if (day === 6 || day === 7) {
+  } else if (day === 6 || day === 0) {
     return "hotpink";
   } else {
     return "lightblue";
