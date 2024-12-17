@@ -61,3 +61,9 @@ function logBookData () {
   console.log('Sales :', copiesSold);
 }
 // --^-- write your code here --^--
+
+logBookData();
+copiesSold = copiesSold + 1;
+logBookData();
+copiesSold = copiesSold + 1;
+logBookData();
