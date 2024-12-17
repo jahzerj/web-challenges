@@ -34,4 +34,4 @@ document.addEventListener("scroll", () => {
   progressBar.style.width = percentScroll + "%";
 });
 
-'So I can make a compare commit'
+("So I can make a compare commit");
