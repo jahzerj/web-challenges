@@ -33,3 +33,5 @@ document.addEventListener("scroll", () => {
   calculateScrollPercentage();
   progressBar.style.width = percentScroll + "%";
 });
+
+'So I can make a compare commit'
