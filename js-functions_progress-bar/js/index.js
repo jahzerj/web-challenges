@@ -26,7 +26,7 @@ function calculateScrollPercentage() {
   const viewHeight = window.innerHeight;
   const documentHeight = document.body.clientHeight;
 
-  return (percentScroll = (howFarScroll / (documentHeight - viewHeight)) * 100);
+  return (percentScroll = (howFarScroll / (documentHeight)) * 100);
 }
 
 document.addEventListener("scroll", () => {
