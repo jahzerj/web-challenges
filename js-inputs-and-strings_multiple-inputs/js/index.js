@@ -1,12 +1,17 @@
 // Task 1: Copy
 
-const firstCopyInput = document.querySelector("[data-js=first-copy-input]");
-const secondCopyInput = document.querySelector("[data-js=second-copy-input]");
-const copyButton = document.querySelector("[data-js=copy-button]");
+const firstCopyInput = document.querySelector('[data-js="first-copy-input"]');
+const secondCopyInput = document.querySelector('[data-js="second-copy-input"]');
+const copyButton = document.querySelector('[data-js="copy-button"]');
 
 // --v-- Write your code here --v--
+copyButton.addEventListener("click", () => {
+secondCopyInput.value = firstCopyInput.value
+});
 
 // --^-- End of Task 1 --^--
+
+
 
 // Task 2: Copy and Uppercase
 
