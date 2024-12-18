@@ -34,13 +34,13 @@ copyInUppercaseButton.addEventListener("click", () => {
 // Task 3: Switch Values
 
 const firstSwitchValueInput = document.querySelector(
-  "[data-js=first-switch-value-input]"
+  '[data-js="first-switch-value-input"]'
 );
 const secondSwitchValueInput = document.querySelector(
-  "[data-js=second-switch-value-input]"
+  '[data-js="second-switch-value-input"]'
 );
 const switchValueButton = document.querySelector(
-  "[data-js=switch-value-button]"
+  '[data-js='switch-value-button']'
 );
 
 // --v-- Write your code here --v--
