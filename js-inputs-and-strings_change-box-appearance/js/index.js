@@ -6,10 +6,14 @@ const inputRadius = document.querySelector('[data-js="input-radius"]');
 const box = document.querySelector('[data-js="box"]');
 
 inputColor.addEventListener("input", () => {
-  box.style.backgroundColor = `hsl(${inputColor.value} 50% 50%)`;
-  console.log(inputColor.value);
+  box.style.background = `hsl(${inputColor.value} 60% 50%)`;
 });
 
-console.log(typeof inputColor);
+// inputRotation.addEventListener("input", () => {
+//   box.style.PROPERTY = rotate(inputRotation.value);
+// });
 
-console.log("number", number);
+inputRadius.addEventListener("input", () => {
+    box.style.borderRadius = `${inputRadius.value}%`
+  });
+
