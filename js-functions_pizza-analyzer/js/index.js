@@ -8,17 +8,20 @@ const outputSection = document.querySelector('[data-js="output-section"]');
 
 const output = document.querySelector('[data-js="output"]');
 
+let pizzaSize1;
+let pizzaSize2;
+
 pizzaInput1.addEventListener("input", () => {
-  const pizzaSize1 = pizzaInput1.value;
-  const pizzaSize2 = pizzaInput2.value;
+   pizzaSize1 = pizzaInput1.value;
+   pizzaSize2 = pizzaInput2.value;
   calculatePizzaGain(pizzaSize1, pizzaSize2);
   updatePizzaDisplay(pizza1,pizzaSize1);
   updateOutputColor(pizzaSize1, pizzaSize2);
 });
 
 pizzaInput2.addEventListener("input", () => {
-  const pizzaSize1 = pizzaInput1.value;
-  const pizzaSize2 = pizzaInput2.value;
+   pizzaSize1 = pizzaInput1.value;
+   pizzaSize2 = pizzaInput2.value;
   calculatePizzaGain(pizzaSize1, pizzaSize2);
   updatePizzaDisplay(pizza2,pizzaSize2);
   updateOutputColor(pizzaSize1, pizzaSize2);
