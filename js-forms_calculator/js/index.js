@@ -19,8 +19,6 @@ function divide(a, b) {
   return a / b;
 }
 
-
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -28,7 +26,27 @@ form.addEventListener("submit", (event) => {
   const data = Object.fromEntries(formData);
 
   let result;
-  let operator = data.operator
-  
+  let checkBox = data.operator;
 
+  console.log(event.target);
+
+  let num1 = Number(data.numberA);
+  let num2 = Number(data.numberB);
+
+  switch (checkBox) {
+    case "addition":
+      result = add(num1, num2);
+      break;
+    case "subtraction":
+      result = subtract(num1, num2);
+      break;
+    case "multiplication":
+      result = multiply(num1, num2);
+      break;
+    case "division":
+      result = divide(num1, num2);
+      break;
+  }
+
+  resultOutput.textContent = result;
 });
