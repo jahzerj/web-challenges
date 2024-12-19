@@ -2,7 +2,7 @@ console.clear();
 
 const form = document.querySelector('[data-js="form"]');
 const tosError = document.querySelector('[data-js="tos-error"]');
-const success = document.querySelector('[data-js="tos-error"]')
+const successMessage = document.querySelector('[data-js="success"]');
 const tosCheckbox = document.querySelector('[data-js="tos"]');
 
 function hideTosError() {
@@ -13,24 +13,29 @@ function showTosError() {
   tosError.removeAttribute("hidden");
 }
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+function showSuccessMessage() {
+ successMessage.style.display = "block";
+}
+function hideSuccessMessage() {
+  successMessage.style.display = "none";
+}
 
-  // --v-- write your code here --v--
+hideTosError();
+hideSuccessMessage();
+
+// Invalid submit
+form.addEventListener("submit", (event) => {
+  if (tosCheckbox.checked === false) {
+    event.preventDefault();
+    showTosError();
+    hideSuccessMessage();
+    return;
+  }
+// Valid submit
   if (tosCheckbox.checked === true) {
     hideTosError();
-    return;
-  } else {
-    showTosError();
+    showSuccessMessage();
+    alert("Complaint successfully submitted");
   }
-
-  console.log(tosCheckbox.checked);
-  // --^-- write your code here --^--
-
-  // eslint-disable-next-line no-alert
-  alert("Form submitted");
 });
 
-// tosCheckbox.addEventListener("input", (event) => {
-//   console.log(event.target.checked);
-// });
