@@ -19,14 +19,16 @@ function divide(a, b) {
   return a / b;
 }
 
+
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+
   let result;
+  let operator = data.operator
+  
 
-  // --v-- write your code here --v--
-
-  // --^-- write your code here --^--
-
-  resultOutput.textContent = result;
 });
