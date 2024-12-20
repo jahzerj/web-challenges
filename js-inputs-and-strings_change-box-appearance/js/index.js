@@ -14,6 +14,5 @@ inputColor.addEventListener("input", () => {
 // });
 
 inputRadius.addEventListener("input", () => {
-    box.style.borderRadius = `${inputRadius.value}%`
-  });
-
+  box.style.borderRadius = `${inputRadius.value}%`;
+});
