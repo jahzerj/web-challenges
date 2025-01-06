@@ -2,6 +2,7 @@ console.clear();
 
 const form = document.querySelector('[data-js="form"]');
 const tosError = document.querySelector('[data-js="tos-error"]');
+const successMessage = document.querySelector('[data-js="success"]');
 const tosCheckbox = document.querySelector('[data-js="tos"]');
 
 function hideTosError() {
@@ -12,13 +13,29 @@ function showTosError() {
   tosError.removeAttribute("hidden");
 }
 
+function showSuccessMessage() {
+ successMessage.style.display = "block";
+}
+function hideSuccessMessage() {
+  successMessage.style.display = "none";
+}
+
+hideTosError();
+hideSuccessMessage();
+
+// Invalid submit
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  // --v-- write your code here --v--
-
-  // --^-- write your code here --^--
-
-  // eslint-disable-next-line no-alert
-  alert("Form submitted");
+  if (tosCheckbox.checked === false) {
+    event.preventDefault();
+    showTosError();
+    hideSuccessMessage();
+    return;
+  }
+// Valid submit
+  if (tosCheckbox.checked === true) {
+    hideTosError();
+    showSuccessMessage();
+    alert("Complaint successfully submitted");
+  }
 });
+
