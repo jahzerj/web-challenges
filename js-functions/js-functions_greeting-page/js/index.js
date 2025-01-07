@@ -22,12 +22,30 @@ Update the content and style of the page based on the current day and time.
 
 const display = document.querySelector('[data-js="display"]');
 
+const time = new Date().getHours();
+
 function getGreeting() {
-  // Code here
+  if (time >= 6 && time <= 12) {
+    console.log("Good Morning");
+  } else if (time >= 13 && time <= 18) {
+    console.log("Good Afternoon");
+  } else if (time >= 19 && time <= 22) {
+    console.log("Good Evening");
+  } else {
+    console.log("Goodnight");
+  }
 }
 
+const day = new Date().getDay();
+
 function getDayColor() {
-  // Code here
+  if (day === 1) {
+    return "darkgray";
+  } else if (day === 6 || day === 0) {
+    return "hotpink";
+  } else {
+    return "lightblue";
+  }
 }
 
 display.textContent = getGreeting();
