@@ -25,10 +25,14 @@ const cards = [
 ];
 
 const onlyCardWithIdTwo = cards.filter((card) => {
-  return card.id === '2';
+  return card.id === "2";
+  //return card.id['2']; why not this?
 });
 
-const allCardsWith3Tags = null;
+const allCardsWith3Tags = cards.filter((card) => {
+  return card.tags.length > 2;
+});
+//failed because length() < NOT a function.
 
 const allCardsThatAreNotBookmarked = null;
 
