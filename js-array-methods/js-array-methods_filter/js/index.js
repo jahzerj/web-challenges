@@ -40,7 +40,14 @@ const allCardsThatAreNotBookmarked = cards.filter((card) => {
   }
 });
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = null;
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => {
+  if (card.isBookmarked = true) {
+    if (card.tags.includes('html' && 'js')) {
+      return card;
+    }
+  }
+});
+
 
 export {
   onlyCardWithIdTwo,
