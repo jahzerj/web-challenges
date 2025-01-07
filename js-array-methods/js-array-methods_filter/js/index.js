@@ -24,7 +24,9 @@ const cards = [
   },
 ];
 
-const onlyCardWithIdTwo = null;
+const onlyCardWithIdTwo = cards.filter((card) => {
+  card.id('2');
+});
 
 const allCardsWith3Tags = null;
 
