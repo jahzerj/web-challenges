@@ -21,3 +21,5 @@ switchButton.addEventListener("click", () => {
   secondInput.value = input1;
   console.log('CLICK')
  });
+
+ adding text for pull request
