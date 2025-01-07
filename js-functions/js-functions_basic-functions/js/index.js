@@ -9,7 +9,10 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const title = 'This is a title';
+const author = 'Pissy McPeepants';
+let bookRating = '5/7 a perfect score';
+let copiesSold = 10000000
 // --^-- write your code here --^--
 
 /*
@@ -27,7 +30,18 @@ Then:
 */
 
 // --v-- write your code here --v--
+// console.log('Title :', title);
+// console.log('Author :', author);
+// console.log('Rating :', bookRating);
+// console.log('Sales :', copiesSold);
 
+// bookRating = '10/10';
+// copiesSold = copiesSold + 30000;
+
+// console.log('Title :', title);
+// console.log('Author :', author);
+// console.log('Rating :', bookRating);
+// console.log('Sales :', copiesSold);
 // --^-- write your code here --^--
 
 /*
@@ -40,5 +54,16 @@ Then:
 */
 
 // --v-- write your code here --v--
-
+function logBookData () {
+  console.log('Title :', title);
+  console.log('Author :', author);
+  console.log('Rating :', bookRating);
+  console.log('Sales :', copiesSold);
+}
 // --^-- write your code here --^--
+
+logBookData();
+copiesSold = copiesSold + 1;
+logBookData();
+copiesSold = copiesSold + 1;
+logBookData();
