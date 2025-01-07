@@ -5,7 +5,14 @@ const container = document.querySelector('[data-js="card-container"]');
 const queryInput = document.querySelector('[data-js="query-input"]');
 
 queryInput.addEventListener("input", (event) => {
+  event.preventDefault();
   container.innerHTML = "";
+  
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+
+  console.log(data)
+
 
   const searchString = event.target.value;
 
@@ -16,3 +23,4 @@ queryInput.addEventListener("input", (event) => {
     container.append(countryElement);
   }
 });
+
