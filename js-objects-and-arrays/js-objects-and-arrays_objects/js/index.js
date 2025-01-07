@@ -17,8 +17,8 @@ const personAlex = {
   age: 24,
 };
 
-const nameOfAlex = "Change me";
-const ageOfAlex = "Change me";
+const nameOfAlex = personAlex.name;
+const ageOfAlex = personAlex.age;
 
 // EXERCISE 3
 // Change the `name` to "Alex" and `age` to "35" by updating the `personToChange`object: `person.existingProperty = newValue`.
@@ -28,6 +28,11 @@ const personToChange = {
   age: 24,
 };
 
+personToChange.name = "Alex";
+personToChange.age = 35;
+
+console.log(personToChange.name, personToChange.age)
+
 // EXERCISE 4
 // Add the properties `age` with value "5" and `breed` with value "husky" to the `petPluto` object: `pet.newProperty = newValue`.
 
@@ -35,6 +40,11 @@ const petPluto = {
   name: "Pluto",
   species: "dog",
 };
+
+petPluto.age = 5;
+petPluto.breed = 'husky';
+
+console.log(petPluto)
 
 export {
   personWithNameAgeEmail,
