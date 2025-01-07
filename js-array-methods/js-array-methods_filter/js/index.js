@@ -34,7 +34,11 @@ const allCardsWith3Tags = cards.filter((card) => {
 });
 //failed because length() < NOT a function.
 
-const allCardsThatAreNotBookmarked = null;
+const allCardsThatAreNotBookmarked = cards.filter((card) => {
+  if (card.isBookmarked != true) {
+    return card;
+  }
+});
 
 const allCardsWithTagsHTMLOrJSThatAreBookmarked = null;
 
