@@ -26,28 +26,13 @@ const cards = [
 
 const onlyCardWithIdTwo = cards.filter((card) => {
   return card.id === "2";
-  //return card.id['2']; why not this?
 });
 
-const allCardsWith3Tags = cards.filter((card) => {
-  return card.tags.length > 2;
-});
-//failed because length() < NOT a function.
+const allCardsWith3Tags = cards.filter((card) => card.tags.length === 3);
 
-const allCardsThatAreNotBookmarked = cards.filter((card) => {
-  if (card.isBookmarked != true) {
-    return card;
-  }
-});
+const allCardsThatAreNotBookmarked = cards.filter((card) => card.isBookmarked != true);
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => {
-  if (card.isBookmarked = true) {
-    if (card.tags.includes('html' && 'js')) {
-      return card;
-    }
-  }
-});
-
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => (card.isBookmarked === true && card.tags.includes("html" && "js")));
 
 export {
   onlyCardWithIdTwo,
