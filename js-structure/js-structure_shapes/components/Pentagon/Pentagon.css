@@ -1,8 +1,15 @@
-.triangle {
+.pentagon {
+  width: 200px;
+  aspect-ratio: 1;
+  background-color: var(--primary-light);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+/* .triangle {
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 0 100px 150px 100px;
-  border-color: transparent transparent #FF4532 transparent;
+  border-width: 0 100px 173.2px 100px;
+  border-color: transparent transparent #1945FF transparent;
   transform: rotate(0deg);
-}
+} */
