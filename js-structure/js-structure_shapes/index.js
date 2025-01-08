@@ -1,3 +1,5 @@
+import { getRandomColor } from "./utils/randomColor";
+
 console.clear();
 
 const root = document.getElementById("root");
