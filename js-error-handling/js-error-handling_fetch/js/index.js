@@ -8,8 +8,10 @@ async function fetchUserData(url) {
   try {
     const response = await fetch(url);
     if(!response.ok) {
-      throw new Error('No such user!')
+      // throw new Error(`Failed to fetch data! Status Code: ${response.status}`)
+      console.log(response.json());
     }
+    // const data = await response.json();
     return await response.json();
   } catch (error) {
     return { error: error.message };
