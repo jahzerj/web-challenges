@@ -7,10 +7,13 @@ function renderStars(filledStars) {
   starContainer.innerHTML = "";
 
   // --v-- write or modify code below this line --v--
-  for (i = 1; i <= 5; i++) {
+  for ( let i = 1; i <= 5; i++) {
     let star = document.createElement("img");
     star.setAttribute("src", "./assets/star-empty.svg");
-
+    star.addEventListener("click", (event) => {
+      renderStars(i);
+      console.log(i);
+    });
     starContainer.append(star);
 
     star.setAttribute(
@@ -20,4 +23,4 @@ function renderStars(filledStars) {
     // --^-- write or modify code above this line --^--
   }
 }
-renderStars(4);
+renderStars();
