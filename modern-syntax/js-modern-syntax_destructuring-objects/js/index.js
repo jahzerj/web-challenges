@@ -6,6 +6,7 @@ Extract only the course name from the `company` object.
 Make sure to export your variable as shown in the example below for the tests to work.
 */
 
+a
 const company = {
   name: "TechAcademy",
   course: "Web Development",
