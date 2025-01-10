@@ -1,4 +1,4 @@
-export function handleFormSubmit(event) {
+export default function handleFormSubmit(event) {
   event.preventDefault();
 
   const formData = new FormData(event.target);
