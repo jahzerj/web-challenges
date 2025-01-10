@@ -40,6 +40,8 @@ Assign each name to a variable called "student1" through "student5", in the give
 */
 
 const nestedStudents = ["Chris", ["Ahmad", "Antigoni"], ["Toby", "Sam"]];
+const unnestedStudents =  [...nestedStudents];
+console.log(unnestedStudents)
 
 /*
 EXERCISE 6
