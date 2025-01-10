@@ -24,7 +24,6 @@ export async function fetchNewColor() {
   const response = await fetch(colorApiUrl);
   const data = await response.json();
 
-  console.log(data);
   let hexName = data.name.closest_named_hex;
   let colorName = data.name.value;
 
