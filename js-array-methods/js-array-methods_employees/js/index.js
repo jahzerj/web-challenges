@@ -5,7 +5,14 @@ import { employees } from "../utils/db.js";
 // Try to find an object with the corresponding lastName and return the found object (instead of 'null')
 // Check the browser preview and conduct some tests to ensure it works correctly.
 
+console.log(employees)
 function findByLastName(employees, lastName) {
+  employees.forEach((employee) => {
+    if (lastName === employee[lastName]) {
+      return employee;
+    };
+  });
+  
   return null;
 
   // Exercise 2:
