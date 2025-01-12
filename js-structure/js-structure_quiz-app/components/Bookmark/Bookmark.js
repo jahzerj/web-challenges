@@ -1,16 +1,14 @@
-
-
 export function Bookmark(props) {
-    const bookmark = document.createElement("button");
-    bookmark.classList.add("bookmark");
-  
-    if (props.active) {
-      bookmark.classList.add("bookmark--active");
-    }
-  
-    bookmark.type = "button";
-    bookmark.setAttribute("aria-label", "bookmark");
-    bookmark.innerHTML = /* html */ `
+  const bookmark = document.createElement("button");
+  bookmark.classList.add("bookmark");
+
+  if (props.active) {
+    bookmark.classList.add("bookmark--active");
+  }
+
+  bookmark.type = "button";
+  bookmark.setAttribute("aria-label", "bookmark");
+  bookmark.innerHTML = /* html */ `
           <svg
               class="bookmark__icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -21,8 +19,8 @@ export function Bookmark(props) {
               />
           </svg>
       `;
-  
-    bookmark.addEventListener("click", props.onClick);
-  
-    return bookmark;
-  }
+
+  bookmark.addEventListener("click", props.onClick);
+
+  return bookmark;
+}
