@@ -1,3 +1,6 @@
+import { cards } from "./cards.js";
+import { Card } from "../components/Card/Card.js";
+
 export default function handleFormSubmit(event) {
   event.preventDefault();
 

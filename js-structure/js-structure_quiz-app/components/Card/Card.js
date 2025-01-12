@@ -1,3 +1,5 @@
+import { Bookmark } from "../Bookmark/Bookmark.js";
+
 export function Card(props) {
     const card = document.createElement("article");
     card.classList.add("card");
