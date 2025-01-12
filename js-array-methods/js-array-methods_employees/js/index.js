@@ -7,14 +7,8 @@ import { employees } from "../utils/db.js";
 
 console.log(employees)
 function findByLastName(employees, lastName) {
-  employees.forEach((employee) => {
-    if (lastName === employee[lastName]) {
-      return employee;
-    };
-  });
+  employees.find((employee) => employee.lastName === lastName) || null;
   
-  return null;
-
   // Exercise 2:
   // The same as above, but now you are searching by the 'id'.
 }
