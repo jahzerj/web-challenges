@@ -34,5 +34,5 @@ describe("Mapping Challenge", () => {
         answer: "On Objects and Arrays",
       },
     ]);
-  });
+  }); 
 });
