@@ -17,7 +17,7 @@ function Button({ color, disabled, text, fontsize, onClick }) {
   return (
     <button
       disabled={disabled}
-      style={{ backgroundColor: color, height: fontsize }}
+      style={{ color: color, fontSize: fontsize }}
       onClick={onClick}
     >
       {text}
