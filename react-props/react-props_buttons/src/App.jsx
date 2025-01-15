@@ -7,7 +7,7 @@ export default function App() {
       color={"orange"}
       disabled={false}
       text={"I am a button"}
-      fontsize={"14px"}
+      fontsize={"100px"}
       onClick={handleClick}
     />
   );
@@ -17,8 +17,7 @@ function Button({ color, disabled, text, fontsize, onClick }) {
   return (
     <button
       disabled={disabled}
-      color={color}
-      fontSize={fontsize}
+      style={{ backgroundColor: color, height: fontsize }}
       onClick={onClick}
     >
       {text}
