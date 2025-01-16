@@ -34,7 +34,7 @@ function sumNumbers(numbers) {
   }
   return sum;
 }
-console.log(sumNumbers(numbers));
+console.log(sumNumbers(numbers)); 
 
 // initilize empty placeholder value
 // TODO: loop through the array, adding each to the sum
