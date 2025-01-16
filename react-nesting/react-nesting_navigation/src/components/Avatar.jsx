@@ -1,5 +1,5 @@
 import Image from "./Image";
-import avatar from "./img/avatar.jpg";
+import avatar from "../img/avatar.jpg";
 
 export default function Avatar() {
   return (
