@@ -1,5 +1,6 @@
 // Find the maximum
 
+
 function maxOfTwoNumbers(num1, num2) {
   if (num1 > num2) {
     return "Max number is: " + num1;
@@ -54,7 +55,7 @@ const words2 = [
   "zenith",
   "ephemeral",
   "vortex",
-  "mystique",
+  "mystique",,
 ];
 
 function averageWordLength(words) {
