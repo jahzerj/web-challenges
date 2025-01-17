@@ -89,16 +89,19 @@ const words3 = [
 
 function uniquifyArray(words) {
   uniqueArray = [];
-  words.filter((word) => uniqueArray.includes(`${word}`)
-    
+  words.forEach((word) => {
+    if (!uniqueArray.includes(word)) {
+      uniqueArray.push(word);
+    }
   });
+  return uniqueArray;
 }
-
+console.log(uniquifyArray(words3));
 // TODO:
-//loop through array, add each value to new array 
+//loop through array, add each value to new array
 // if that value is in the new array, do not add it
 // return the new array after old array has been looped
-// 
+//
 // //
 
 // Find elements
