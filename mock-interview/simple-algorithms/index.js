@@ -54,15 +54,14 @@ const words2 = [
   'ephemeral',
   'vortex',
   'mystique',
-  ,
 ];
 
 function averageWordLength(words) {
   let lengthCount = 0;
-  const averageLength = lengthCount / words.length;
   for (i = 0; i < words.length; i++) {
     lengthCount += words[i].length;
   }
+  let averageLength = lengthCount / words.length;
   return averageLength;
 }
 console.log(averageWordLength(words2));
@@ -89,8 +88,18 @@ const words3 = [
 ];
 
 function uniquifyArray(words) {
-  // TODO:
+  uniqueArray = [];
+  words.filter((word) => uniqueArray.includes(`${word}`)
+    
+  });
 }
+
+// TODO:
+//loop through array, add each value to new array 
+// if that value is in the new array, do not add it
+// return the new array after old array has been looped
+// 
+// //
 
 // Find elements
 const wordsFind = [
