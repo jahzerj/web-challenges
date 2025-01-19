@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./styles.css";
 import Card from "./components/Card";
 import Title from "./components/Title";
@@ -9,7 +9,9 @@ export default function App() {
     <main className="app">
       <Title text="ClientBoard" />
       <div className="app__card-grid">
-        <Card user={USERS[0]} />
+        {USERS.map((user) => (
+          <Card user={user} key={user.id} />
+        ))}
       </div>
     </main>
   );
