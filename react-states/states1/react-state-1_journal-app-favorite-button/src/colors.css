@@ -1,0 +1,15 @@
+:root {
+  /* Text colors and footer background */
+  --color-granite: #252629;
+  /* Main background color and footer text */
+  --color-foam: #ffffff;
+  /* Primary color for buttons, icons, etc. */
+  --color-nemo: #ff4a11;
+  /* Active state color for buttons, icons, etc. */
+  --color-nemo-mid: #ff5c29;
+  /* Hover state color for buttons, icons, etc. */
+  --color-nemo-dark: #e5430f;
+  /* Border colors, secondary backgrounds, and hover effects */
+  --color-water-10: #e4e8f0;
+  --color-water: #f3f5f9;
+}
