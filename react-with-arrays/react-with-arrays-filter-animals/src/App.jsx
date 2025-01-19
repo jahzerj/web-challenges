@@ -37,16 +37,35 @@ export default function App() {
     setSelectedHabitat(habitat);
   }
 
+  // filter criteria is based on selectedhabitat.
+  // filter animals, compare animal(from animals).habitat to selectedHabitat,
+  // if strictly equal, then filteranimal, otherwise, all animals.
+  const filteredAnimals = selectedHabitat
+    ? animals.filter((animal) => animal.habitat === selectedHabitat)
+    : animals;
+
   return (
     <>
       <h1>Animal Filter</h1>
       <section>
         {habitats.map((habitat) => (
-          <button className="button" key={habitat} onClick={() => selectHabitat(habitat)}>
+          <button
+            className={`button ${selectedHabitat === habitat ? 'button--highlight' : ''}`}
+            key={habitat}
+            onClick={() => selectHabitat(habitat)}
+          >
             {habitat}
           </button>
         ))}
       </section>
+      <ul>
+        {filteredAnimals.map((animal) => (
+          <li key={animal.id}>
+            {animal.name}
+            {animal.emoji}
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

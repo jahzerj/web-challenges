@@ -35,3 +35,9 @@ li {
   border: 2px solid lightblue;
   padding: 1rem;
 }
+
+.button--highlight {
+  background-color: lightblue;
+  color: white;
+  font-weight: bold;
+}
