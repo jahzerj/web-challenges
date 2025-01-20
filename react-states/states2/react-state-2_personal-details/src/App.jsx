@@ -2,6 +2,9 @@ import "./styles.css";
 import Form from "./components/Form";
 
 export default function App() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
   return (
     <div className="container">
       <h1>Personal Details Form</h1>
