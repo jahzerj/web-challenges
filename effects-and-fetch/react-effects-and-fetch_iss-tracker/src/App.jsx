@@ -12,7 +12,16 @@ export default function App() {
   });
 
   async function getISSCoords() {
+    //object thats 'unreadable'
     const response = await fetch(URL);
+    //object with the data we need to extract
+    const location = await response.json();
+    console.log(location);
+    setCoords({
+      ...coords,
+      longitude: location.longitude,
+      latitude: location.latitude,
+    });
   }
 
   return (
