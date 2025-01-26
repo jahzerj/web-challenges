@@ -64,7 +64,7 @@ function averageWordLength(words) {
   let averageLength = lengthCount / words.length;
   return averageLength;
 }
-console.log(averageWordLength(words2));
+// console.log(averageWordLength(words2));
 
 //Calculate length of each, add length of each string, divide by the number of strings.
 // words.length = # of strings
@@ -96,7 +96,7 @@ function uniquifyArray(words) {
   });
   return uniqueArray;
 }
-console.log(uniquifyArray(words3));
+// console.log(uniquifyArray(words3));
 // TODO:
 //loop through array, add each value to new array
 // if that value is in the new array, do not add it
@@ -117,8 +117,11 @@ const wordsFind = [
 ];
 
 function doesWordExist(haystack, needle) {
-  // TODO:
+  // TODO: loop through arraz and return word if it is inside the array
+  return haystack.includes(needle);
 }
+
+// console.log('word does exsist:', doesWordExist(wordsFind, 'matter'));
 
 // Count repetition
 
@@ -137,7 +140,22 @@ const wordsCount = [
 ];
 
 function howManyTimes(haystack, needle) {
-  // TODO:
+  let count = 0;
+
+  for (i = 0; i < haystack.length; i++) {
+    if (haystack[i] === needle) {
+      count++;
+    }
+  }
+  return count;
+  //for loop to count a repetition in the array
+}
+
+//THAT ^ or THIS V
+function howManyTimes2(haystack, needle) {
+  let newArray = haystack.filter((word) => word === needle);
+
+  return newArray.length();
 }
 
 // Bonus: A generic sum function
@@ -145,7 +163,18 @@ function howManyTimes(haystack, needle) {
 const mixedArray = ['apple', 'banana', 'cherry', 'date', 42, 7, 1995, 23, true, false];
 
 function sum(array) {
-  // TODO:
+  let count = 0;
+
+  for (i = 0; i < array.length; i++) {
+    if (typeof array[i] === 'boolean') {
+      count += array[i] ? 1 : 0;
+    } else if (typeof array[i] === 'string') {
+      count += array[i].length;
+    } else if (typeof array[i] === 'number') {
+      count += array[i];
+    }
+  }
+  return count;
 }
 
 // Bonus: Write a function that calculates the greatest product of four
@@ -175,8 +204,66 @@ const matrix = [
 ];
 
 function greatestProduct(matrix) {
-  // TODO:
+  let maxProduct = 0; // To store the greatest product
+  let maxElements = [];
+  let maxPosition = [];
+
+  const size = matrix.length;
+
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
+      // Check horizontally (right)
+      if (j + 3 < size) {
+        const elements = [
+          matrix[i][j],
+          matrix[i][j + 1],
+          matrix[i][j + 2],
+          matrix[i][j + 3],
+        ];
+
+        const horizontalProduct = elements.reduce((a, b) => a * b, 1);
+
+        if (horizontalProduct > maxProduct) {
+          maxProduct = horizontalProduct;
+          maxElements = elements;
+          maxPosition = [
+            [i, j],
+            [i, j + 1],
+            [i, j + 2],
+            [i, j + 3],
+          ];
+        }
+      }
+
+      // Check vertically (down)
+      if (i + 3 < size) {
+        const elements = [
+          matrix[i][j],
+          matrix[i + 1][j],
+          matrix[i + 2][j],
+          matrix[i + 3][j],
+        ];
+        const verticalProduct = elements.reduce((a, b) => a * b, 1);
+        if (verticalProduct > maxProduct) {
+          maxProduct = verticalProduct;
+          maxElements = elements;
+          maxPosition = [
+            [i, j],
+            [i + 1, j],
+            [i + 2, j],
+            [i + 3, j],
+          ];
+        }
+      }
+    }
+  }
+
+  console.log('Greatest Product:', maxProduct);
+  console.log('Elements:', maxElements);
+  console.log('Positions:', maxPosition);
+  return maxProduct;
 }
+console.log('maxproduct is:', greatestProduct(matrix));
 
 module.exports = {
   maxOfTwoNumbers,
