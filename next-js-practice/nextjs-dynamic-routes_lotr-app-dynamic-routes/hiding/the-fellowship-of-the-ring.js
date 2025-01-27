@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import { volumes } from "../../lib/data.js";
+import Image from 'next/image';
+import Link from 'next/link';
+import { volumes } from '../../lib/data.js';
 
 export default function VolumeDetail() {
   const volumeIndex = volumes.findIndex(
-    (volume) => volume.slug === "the-fellowship-of-the-ring"
+    (volume) => volume.slug === 'the-fellowship-of-the-ring'
   );
 
   const volume = volumes[volumeIndex];
@@ -29,12 +29,7 @@ export default function VolumeDetail() {
           </li>
         ))}
       </ul>
-      <Image
-        src={cover}
-        alt={`Cover image of ${title}`}
-        width={140}
-        height={230}
-      />
+      <Image src={cover} alt={`Cover image of ${title}`} width={140} height={230} />
       {previousVolume ? (
         <div>
           <Link href={`/volumes/${previousVolume.slug}`}>
