@@ -1,34 +1,71 @@
-import React from "react";
-import "./styles.css";
+import React, { useState } from 'react';
+import './styles.css';
 
 const animals = [
-  { id: "1", name: "Dog", habitat: "Domestic Animal", emoji: "🐕" },
-  { id: "2", name: "Cat", habitat: "Domestic Animal", emoji: "🐈" },
-  { id: "3", name: "Hamster", habitat: "Domestic Animal", emoji: "🐹" },
-  { id: "4", name: "Parrot", habitat: "Domestic Animal", emoji: "🦜" },
-  { id: "5", name: "Fish", habitat: "Domestic Animal", emoji: "🐠" },
+  { id: '1', name: 'Dog', habitat: 'Domestic Animal', emoji: '🐕' },
+  { id: '2', name: 'Cat', habitat: 'Domestic Animal', emoji: '🐈' },
+  { id: '3', name: 'Hamster', habitat: 'Domestic Animal', emoji: '🐹' },
+  { id: '4', name: 'Parrot', habitat: 'Domestic Animal', emoji: '🦜' },
+  { id: '5', name: 'Fish', habitat: 'Domestic Animal', emoji: '🐠' },
 
-  { id: "6", name: "Fox", habitat: "Forest", emoji: "🦊" },
-  { id: "7", name: "Bear", habitat: "Forest", emoji: "🐻" },
-  { id: "8", name: "Owl", habitat: "Forest", emoji: "🦉" },
-  { id: "9", name: "Deer", habitat: "Forest", emoji: "🦌" },
-  { id: "10", name: "Hedgehog", habitat: "Forest", emoji: "🦔" },
+  { id: '6', name: 'Fox', habitat: 'Forest', emoji: '🦊' },
+  { id: '7', name: 'Bear', habitat: 'Forest', emoji: '🐻' },
+  { id: '8', name: 'Owl', habitat: 'Forest', emoji: '🦉' },
+  { id: '9', name: 'Deer', habitat: 'Forest', emoji: '🦌' },
+  { id: '10', name: 'Hedgehog', habitat: 'Forest', emoji: '🦔' },
 
-  { id: "11", name: "Whale", habitat: "Ocean", emoji: "🐋" },
-  { id: "12", name: "Dolphin", habitat: "Ocean", emoji: "🐬" },
-  { id: "13", name: "Crab", habitat: "Ocean", emoji: "🦀" },
-  { id: "14", name: "Lobster", habitat: "Ocean", emoji: "🦞" },
-  { id: "15", name: "Shark", habitat: "Ocean", emoji: "🦈" },
+  { id: '11', name: 'Whale', habitat: 'Ocean', emoji: '🐋' },
+  { id: '12', name: 'Dolphin', habitat: 'Ocean', emoji: '🐬' },
+  { id: '13', name: 'Crab', habitat: 'Ocean', emoji: '🦀' },
+  { id: '14', name: 'Lobster', habitat: 'Ocean', emoji: '🦞' },
+  { id: '15', name: 'Shark', habitat: 'Ocean', emoji: '🦈' },
 
-  { id: "16", name: "Eagle", habitat: "Mountains", emoji: "🦅" },
-  { id: "17", name: "Goat", habitat: "Mountains", emoji: "🐐" },
-  { id: "18", name: "Wolf", habitat: "Mountains", emoji: "🐺" },
-  { id: "19", name: "Snow Leopard", habitat: "Mountains", emoji: "🐆" },
-  { id: "20", name: "Yak", habitat: "Mountains", emoji: "🐃" },
+  { id: '16', name: 'Eagle', habitat: 'Mountains', emoji: '🦅' },
+  { id: '17', name: 'Goat', habitat: 'Mountains', emoji: '🐐' },
+  { id: '18', name: 'Wolf', habitat: 'Mountains', emoji: '🐺' },
+  { id: '19', name: 'Snow Leopard', habitat: 'Mountains', emoji: '🐆' },
+  { id: '20', name: 'Yak', habitat: 'Mountains', emoji: '🐃' },
 ];
 
-const habitats = ["Mountains", "Ocean", "Forest", "Domestic Animal"];
+const habitats = ['Mountains', 'Ocean', 'Forest', 'Domestic Animal'];
 
 export default function App() {
-  return <h1>Animal Filter</h1>;
+  const [selectedHabitat, setSelectedHabitat] = useState('');
+
+  function selectHabitat(habitat) {
+    console.log('Selected habitat', habitat);
+    setSelectedHabitat(habitat);
+  }
+
+  // filter criteria is based on selectedhabitat.
+  // filter animals, compare animal(from animals).habitat to selectedHabitat,
+  // if strictly equal, then filteranimal, otherwise, all animals.
+  const filteredAnimals = selectedHabitat
+    ? animals.filter((animal) => animal.habitat === selectedHabitat)
+    : animals;
+
+  return (
+    <>
+      <h1>Animal Filter</h1>
+      <section>
+        {habitats.map((habitat) => (
+          <button
+            className={`button ${selectedHabitat === habitat ? 'button--highlight' : ''}`}
+            key={habitat}
+            onClick={() => selectHabitat(habitat)}
+          >
+            {habitat}
+          </button>
+        ))}
+      </section>
+      <ul>
+        {filteredAnimals.map((animal) => (
+          <li key={animal.id}>
+            {animal.name}
+            {animal.emoji}
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 }
