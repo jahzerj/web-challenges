@@ -1,5 +1,6 @@
 import GlobalStyle from "../styles";
 import Layout from "../components/Layout";
+
 import { useState } from "react";
 
 const initialLights = [
@@ -27,6 +28,8 @@ export default function App({ Component, pageProps }) {
     <Layout>
       <GlobalStyle />
       <Component {...pageProps} lights={lights} handleToggle={handleToggle} />
+
+
     </Layout>
   );
 }
