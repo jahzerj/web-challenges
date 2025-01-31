@@ -17,7 +17,6 @@ const initialCount = 0;
 
 export default function App({ Component, pageProps }) {
   const [lights, setLights] = useState(initialLights);
-  const [count, setCount] = useState(initialCount);
 
   function handleToggle(lightId) {
     const newLightState = lights.map((light) =>
@@ -28,6 +27,14 @@ export default function App({ Component, pageProps }) {
 
   const lightsOnCount = lights.filter((light) => light.isOn).length;
 
+  function turnAllLightsOn() {
+    setLights(lights.map((light) => ({ ...light, isOn: true })));
+  }
+
+  function turnAllLightsOff() {
+    setLights(lights.map((light) => ({ ...light, isOn: false })));
+  }
+
   return (
     <Layout>
       <GlobalStyle />
@@ -36,6 +43,8 @@ export default function App({ Component, pageProps }) {
         lights={lights}
         handleToggle={handleToggle}
         lightsOnCount={lightsOnCount}
+        turnAllLightsOff={turnAllLightsOff}
+        turnAllLightsOn={turnAllLightsOn}
       />
     </Layout>
   );

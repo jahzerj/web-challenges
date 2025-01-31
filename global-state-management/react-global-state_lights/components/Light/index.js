@@ -6,7 +6,6 @@ export default function Light({ light, onToggle }) {
       type="button"
       onClick={() => {
         onToggle(light.id);
-        onToggle(light.id);
       }}
       $isOn={light.isOn}
     >
