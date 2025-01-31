@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Light from "../Light";
+import styled from 'styled-components';
+import Light from '../Light';
 
 const StyledLights = styled.ul`
   list-style-type: none;
@@ -11,32 +11,32 @@ const StyledLights = styled.ul`
   justify-content: center;
 `;
 
-export default function Lights() {
+export default function Lights({ light, handleToggle }) {
   return (
     <StyledLights>
       <li>
-        <Light name="Living Room" />
+        <Light name="Living Room" light={light} onToggle={handleToggle} />
       </li>
       <li>
-        <Light name="Kitchen" />
+        <Light name="Kitchen" light={light} onToggle={handleToggle} />
       </li>
       <li>
-        <Light name="Bedroom" />
+        <Light name="Bedroom" light={light} onToggle={handleToggle} />
       </li>
       <li>
-        <Light name="Bathroom" />
+        <Light name="Bathroom" light={light} onToggle={handleToggle} />
       </li>
       <li>
-        <Light name="Garage" />
+        <Light name="Garage" light={light} onToggle={handleToggle} />
       </li>
       <li>
-        <Light name="Porch" />
+        <Light name="Porch" light={light} onToggle={handleToggle} />
       </li>
       <li>
-        <Light name="Garden" />
+        <Light name="Garden" light={light} onToggle={handleToggle} />
       </li>
       <li>
-        <Light name="Office" />
+        <Light name="Office" light={light} onToggle={handleToggle} />
       </li>
     </StyledLights>
   );
