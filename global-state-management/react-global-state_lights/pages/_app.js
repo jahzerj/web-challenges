@@ -28,8 +28,6 @@ export default function App({ Component, pageProps }) {
     <Layout>
       <GlobalStyle />
       <Component {...pageProps} lights={lights} handleToggle={handleToggle} />
-
-
     </Layout>
   );
 }
