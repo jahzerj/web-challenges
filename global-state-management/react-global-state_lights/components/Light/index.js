@@ -17,7 +17,7 @@ export default function Light({ light, onToggle }) {
         {/* dont need this state? */}
 
         {/* <State>{isOn ? "On" : "Off"}</State> */}
-        <State>{isOn ? "On" : "Off"}</State>
+        <State>{$isOn={light.isOn} ? "On" : "Off"}</State>
       </Text>
     </LightButton>
   );
