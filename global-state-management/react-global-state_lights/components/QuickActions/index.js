@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Button from "../Button";
+import styled from 'styled-components';
+import Button from '../Button';
 
 const StyledQuickActions = styled.div`
   display: flex;
@@ -7,23 +7,13 @@ const StyledQuickActions = styled.div`
   gap: 16px;
 `;
 
-export default function QuickActions() {
+export default function QuickActions({ onTurnAllLightsOn, onTurnAllLightsOff }) {
   return (
     <StyledQuickActions>
-      <Button
-        type="button"
-        onClick={() => {
-          console.log("Turn all lights off");
-        }}
-      >
+      <Button type="button" onClick={() => onTurnAllLightsOff()}>
         Turn all lights off
       </Button>
-      <Button
-        type="button"
-        onClick={() => {
-          console.log("Turn all lights on");
-        }}
-      >
+      <Button type="button" onClick={() => onTurnAllLightsOn()}>
         Turn all lights on
       </Button>
     </StyledQuickActions>
