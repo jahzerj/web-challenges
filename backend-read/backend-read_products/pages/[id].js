@@ -1,7 +1,7 @@
-import useSWR from "swr";
-import styled from "styled-components";
-import { useRouter } from "next/router";
-import StyledLink from "@/components/Link";
+import useSWR from 'swr';
+import styled from 'styled-components';
+import { useRouter } from 'next/router';
+import StyledLink from '@/components/Link';
 
 export default function Product() {
   const router = useRouter();
