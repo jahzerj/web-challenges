@@ -32,6 +32,21 @@ export default function Product() {
     }
   }
 
+  async function handleDeleteProduct() {
+    const response = await fetch(`/api/products/${id}`, { method: 'DELETE' });
+
+    if (response.ok) {
+      await response.json();
+      router.push('/');
+      return;
+    }
+
+    if (!response.ok) {
+      console.log(response.status);
+      return;
+    }
+  }
+
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -58,6 +73,9 @@ export default function Product() {
           Edit Product
         </Button>
       </ProductCard>
+      <Button type="button" onClick={() => handleDeleteProduct(id)}>
+        Delete Product
+      </Button>
       {isEditMode && (
         <ProductForm
           onSubmit={handleEditProduct}
